@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { nanoid } from 'nanoid';
 
 const list = [
   { id: '1', name: 'jimao' },
@@ -14,5 +15,11 @@ export class NftService {
 
   public detail(id: string) {
     return list.find((item) => item.id === id);
+  }
+
+  public add(name: string) {
+    const nextId = nanoid();
+    list.push({ id: nextId, name });
+    return nextId;
   }
 }
