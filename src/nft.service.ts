@@ -30,4 +30,12 @@ export class NftService {
     }
     return index;
   }
+
+  public update(id: string, name: string) {
+    const index = list.findIndex((item) => item.id === id);
+    if (index >= 0) {
+      list[index].name = name;
+    }
+    return list[index];
+  }
 }

@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Delete, Body } from '@nestjs/common';
+import { Controller, Get, Param, Post, Delete, Put, Body } from '@nestjs/common';
 import { NftService } from './nft.service';
 
 @Controller('api/nft')
@@ -23,5 +23,10 @@ export class NFTController {
   @Delete()
   public delete(@Body('id') id: string) {
     return this.nftService.delete(id);
+  }
+
+  @Put()
+  public update(@Body('id') id: string, @Body('name') name: string) {
+    return this.nftService.update(id, name);
   }
 }
