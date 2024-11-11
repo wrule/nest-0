@@ -9,4 +9,8 @@ export class NftService {
       { id: 3, name: 'eth' },
     ];
   }
+
+  public detail(id: number) {
+    return { id, name: 'btc' };
+  }
 }
