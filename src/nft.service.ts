@@ -10,7 +10,7 @@ export class NftService {
     ];
   }
 
-  public detail(id: number) {
+  public detail(id: string) {
     return { id, name: 'btc' };
   }
 }
