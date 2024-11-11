@@ -22,4 +22,12 @@ export class NftService {
     list.push({ id: nextId, name });
     return nextId;
   }
+
+  public delete(id: string) {
+    const index = list.findIndex((item) => item.id === id);
+    if (index >= 0) {
+      list.splice(index, 1);
+    }
+    return index;
+  }
 }
