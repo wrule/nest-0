@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { NFTController } from './nft.controller';
+import { NftService } from './nft.service';
 
 @Module({
   imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [NFTController],
+  providers: [NftService],
 })
-export class AppModule {}
+export class AppModule { }
